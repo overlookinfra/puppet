@@ -1,0 +1,8 @@
+name: Sync any source updates
+on:
+  workflow_dispatch:
+  schedule:
+  - cron:  '0 2 * * *'
+jobs:
+  update:
+    uses: overlookinfra/shared-actions/.github/workflows/sync.yml@main
