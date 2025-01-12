@@ -9,7 +9,7 @@ toc: columns
 
 # <%= title %>
 
-> **NOTE:** This page was generated from the Puppet source code on <%= now %>
+> **NOTE:** This page was generated from the OpenVox source code on <%= now %>
 
 
 
@@ -17,7 +17,7 @@ toc: columns
 
 ### Built-in types and custom types
 
-This is the documentation for Puppet's built-in resource types and providers. Additional resource types are distributed in Puppet modules.
+This is the documentation for OpenVox's built-in resource types and providers. Additional resource types are distributed in Puppet modules.
 
 You can find and install modules by browsing the
 [Puppet Forge](http://forge.puppet.com). See each module's documentation for
@@ -89,7 +89,7 @@ on `file` resources).
 _Providers_ implement the same resource type on different kinds of systems.
 They usually do this by calling out to external commands.
 
-Although Puppet automatically selects an appropriate default provider, you
+Although OpenVox automatically selects an appropriate default provider, you
 can override the default with the `provider` attribute. (For example, `package`
 resources on Red Hat systems default to the `yum` provider, but you can specify
 `provider => gem` to install Ruby libraries with the `gem` command.)
@@ -104,7 +104,7 @@ shell path.
 _Features_ are abilities that some providers might not support. Generally, a
 feature corresponds to some allowed values for a resource attribute.
 
-This is often the case with the `ensure` attribute. In most types, Puppet
+This is often the case with the `ensure` attribute. In most types, OpenVox
 doesn't create new resources when omitting `ensure` but still modifies existing
 resources to match specifications in the manifest. However, in some types this
 isn't always the case, or additional values provide more granular control. For
@@ -139,7 +139,7 @@ The following types are included in supported modules on the Forge. However, the
 
 ### Type modules available on the Forge
 
-The following types are contained in modules that are maintained, but are not repackaged into Puppet agent. If you need to use them, you must install the modules separately. 
+The following types are contained in modules that are maintained, but are not repackaged into Puppet agent. If you need to use them, you must install the modules separately.
 
 - [`k5login`](https://forge.puppet.com/puppetlabs/k5login_core)
 - [`mailalias`](https://forge.puppet.com/puppetlabs/mailalias_core)

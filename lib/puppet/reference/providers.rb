@@ -107,7 +107,7 @@ providers = Puppet::Util::Reference.newreference :providers, :title => "Provider
   ret
 end
 providers.header = "
-Puppet resource types are usually backed by multiple implementations called `providers`,
+OpenVox resource types are usually backed by multiple implementations called `providers`,
 which handle variance between platforms and tools.
 
 Different providers are suitable or unsuitable on different platforms based on things

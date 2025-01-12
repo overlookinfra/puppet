@@ -7,7 +7,7 @@ Puppet::Indirector::Face.define(:node, '0.0.1') do
 
   summary _("View and manage node definitions.")
   description <<-'EOT'
-    This subcommand interacts with node objects, which are used by Puppet to
+    This subcommand interacts with node objects, which are used by OpenVox to
     build a catalog. A node object consists of the node's facts, environment,
     node parameters (exposed in the parser as top-scope variables), and classes.
   EOT

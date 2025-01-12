@@ -20,7 +20,7 @@ class Puppet::Configurer
 
   # Provide more helpful strings to the logging that the Agent does
   def self.to_s
-    _("Puppet configuration client")
+    _("OpenVox configuration client")
   end
 
   def self.should_pluginsync?
@@ -317,7 +317,7 @@ class Puppet::Configurer
       if options[:catalog].nil? && do_failover
         server, port = find_functional_server
         if server.nil?
-          detail = _("Could not select a functional puppet server from server_list: '%{server_list}'") % { server_list: Puppet.settings.value(:server_list, Puppet[:environment].to_sym, true) }
+          detail = _("Could not select a functional server from server_list: '%{server_list}'") % { server_list: Puppet.settings.value(:server_list, Puppet[:environment].to_sym, true) }
           if Puppet[:usecacheonfailure]
             options[:pluginsync] = false
             @running_failure = true
@@ -331,7 +331,7 @@ class Puppet::Configurer
           end
         else
           # TRANSLATORS 'server_list' is the name of a setting and should not be translated
-          Puppet.debug _("Selected puppet server from the `server_list` setting: %{server}:%{port}") % { server: server, port: port }
+          Puppet.debug _("Selected server from the `server_list` setting: %{server}:%{port}") % { server: server, port: port }
           report.server_used = "#{server}:#{port}"
         end
         Puppet.override(server: server, serverport: port) do
