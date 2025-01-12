@@ -11,7 +11,7 @@ require 'yaml'
 require 'uri'
 
 class Puppet::Resource::Catalog::Compiler < Puppet::Indirector::Code
-  desc "Compiles catalogs on demand using Puppet's compiler."
+  desc "Compiles catalogs on demand."
 
   include Puppet::Util
   include Puppet::Util::Checksums

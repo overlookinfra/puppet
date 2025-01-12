@@ -224,7 +224,7 @@ Puppet::Type.type(:user).provide :directoryservice do
     when 'iterations'
       Integer(embedded_binary_plist['SALTED-SHA512-PBKDF2'][field])
     else
-      raise Puppet::Error, "Puppet has tried to read an incorrect value from the user #{user_name} in the SALTED-SHA512-PBKDF2 hash. Acceptable fields are 'salt', 'entropy', or 'iterations'."
+      raise Puppet::Error, "Incorrect value read from the user #{user_name} in the SALTED-SHA512-PBKDF2 hash. Acceptable fields are 'salt', 'entropy', or 'iterations'."
     end
   end
 
@@ -414,7 +414,7 @@ Puppet::Type.type(:user).provide :directoryservice do
   def salt=(value)
     if Puppet::Util::Package.versioncmp(self.class.get_os_version, '10.15') >= 0
       if value.length != 64
-        self.fail "macOS versions 10.15 and higher require the salt to be 32-bytes. Since Puppet's user resource requires the value to be hex encoded, the length of the salt's string must be 64. Please check your salt and try again."
+        self.fail "macOS versions 10.15 and higher require the salt to be 32-bytes. Since the user resource requires the value to be hex encoded, the length of the salt's string must be 64. Please check your salt and try again."
       end
     end
     if Puppet::Util::Package.versioncmp(self.class.get_os_version, '10.7') > 0
@@ -452,7 +452,7 @@ Puppet::Type.type(:user).provide :directoryservice do
     define_method("#{setter_method}=") do |value|
       if @property_hash[setter_method.intern]
         if %w[home uid].include?(setter_method)
-          raise Puppet::Error, "OS X version #{self.class.get_os_version} does not allow changing #{setter_method} using puppet"
+          raise Puppet::Error, "OS X version #{self.class.get_os_version} does not allow changing #{setter_method}"
         end
 
         begin
@@ -667,7 +667,7 @@ Puppet::Type.type(:user).provide :directoryservice do
     when 'iterations'
       shadow_hash_data['SALTED-SHA512-PBKDF2'][field] = Integer(value)
     else
-      raise Puppet::Error "Puppet has tried to set an incorrect field for the 'SALTED-SHA512-PBKDF2' hash. Acceptable fields are 'salt', 'entropy', or 'iterations'."
+      raise Puppet::Error "Incorrect field for the 'SALTED-SHA512-PBKDF2' hash. Acceptable fields are 'salt', 'entropy', or 'iterations'."
     end
 
     # on 10.8, this field *must* contain 8 stars, or authentication will

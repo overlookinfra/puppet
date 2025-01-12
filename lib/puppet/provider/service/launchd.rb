@@ -148,7 +148,7 @@ Puppet::Type.type(:service).provide :launchd, :parent => :base do
           @label_to_path_map[job["Label"]] = filepath
         else
           # TRANSLATORS 'plist' and label' should not be translated
-          Puppet.debug(_("The %{file} plist does not contain a 'label' key; Puppet is skipping it") % { file: filepath })
+          Puppet.debug(_("The %{file} plist does not contain a 'label' key; skipping it") % { file: filepath })
           next
         end
       end

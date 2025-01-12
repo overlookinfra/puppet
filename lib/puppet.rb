@@ -5,7 +5,7 @@ require_relative 'puppet/concurrent/synchronized'
 
 Puppet::OLDEST_RECOMMENDED_RUBY_VERSION = '3.1.0'
 if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new(Puppet::OLDEST_RECOMMENDED_RUBY_VERSION)
-  raise LoadError, "Puppet #{Puppet.version} requires Ruby #{Puppet::OLDEST_RECOMMENDED_RUBY_VERSION} or greater, found Ruby #{RUBY_VERSION.dup}."
+  raise LoadError, "OpenVox #{Puppet.version} requires Ruby #{Puppet::OLDEST_RECOMMENDED_RUBY_VERSION} or greater, found Ruby #{RUBY_VERSION.dup}."
 end
 
 $LOAD_PATH.extend(Puppet::Concurrent::Synchronized)
