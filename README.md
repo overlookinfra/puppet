@@ -6,8 +6,10 @@ configurations) based on a centralized specification.
 
 ## Documentation
 
-Documentation for Puppet and related projects can be found online at the
-[Puppet Docs site](https://puppet.com/docs).
+As of now, OpenVox is effectively the same as the original Puppet™️ packages, aside from some minor build pipeline changes and package renaming.
+This means that aside from the installation, all Puppet™️ docs and tutorials will still be completely applicable.
+As the OpenVox project matures, we will create more documentation, guides, and tutorials.
+For the time being though, now you’ll want to hop over to [Puppet’s own documentation](https://puppet.com/docs) and go from there.
 
 ### HTTP API
 
@@ -25,17 +27,17 @@ see the [Quick Start to Developing on Puppet](docs/quickstart.md) guide.
 
 We'd love to get contributions from you! For a quick guide to getting your
 system setup for developing, take a look at our [Quickstart
-Guide](https://github.com/puppetlabs/puppet/blob/main/docs/quickstart.md). Once you are up and running, take a look at the
+Guide](docs/quickstart.md). Once you are up and running, take a look at the
 [Contribution Documents](https://github.com/OpenVoxProject/.github/blob/main/CONTRIBUTING.md) to see how to get your changes merged
 in.
 
 For more complete docs on developing with Puppet, take a look at the
-rest of the [developer documents](https://github.com/puppetlabs/puppet/blob/main/docs/index.md).
+rest of the [developer documents](docs/index.md).
 
 ## Licensing
 
-See [LICENSE](https://github.com/puppetlabs/puppet/blob/main/LICENSE) file. OpenVox is licensed by Vox Pupuli as a community maintained
-implementation of Puppet. Vox Pupuli can be contacted at: pmc@voxpupuli.org.
+See [LICENSE](LICENSE) file. OpenVox is licensed by Vox Pupuli as a community maintained
+implementation of Puppet. Vox Pupuli can be contacted at: voxpupuli@groups.io.
 Puppet itself is licensed by Puppet, Inc. under the Apache license. Puppet, Inc. can be contacted at: info@puppet.com
 
 ## Support
@@ -57,4 +59,5 @@ a best-effort basis, until the previous major version is no longer maintained.
 
 For example: If a security vulnerability is discovered in Puppet 8.1.1, we
 would fix it in the 8 series, most likely as 8.1.2. Maintainers would then make
-a best effort to backport that fix onto the latest Puppet 7 release.
+a best effort to backport that fix onto earlier releases that haven't reached
+their respective end-of-life dates.
