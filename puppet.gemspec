@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
     OpenVox is a community implementation of Puppet, an automated administrative engine for your Linux, Unix, and Windows systems, performs administrative tasks
     (such as adding users, installing packages, and updating server configurations) based on a centralized specification.
   EOF
-  spec.email = "pmc@voxpupuli.org."
+  spec.email = "voxpupuli@groups.io"
   spec.executables = ["puppet"]
   spec.files = Dir['[A-Z]*'] + Dir['install.rb'] + Dir['bin/*'] + Dir['lib/**/*'] + Dir['conf/*'] + Dir['man/**/*'] + Dir['tasks/*'] + Dir['locales/**/*'] + Dir['ext/**/*'] + Dir['examples/**/*']
   spec.license = "Apache-2.0"
