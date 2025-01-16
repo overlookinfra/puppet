@@ -67,8 +67,7 @@ class Puppet::Application::Apply < Puppet::Application
       apply can effectively mimic the catalog that would be served by OpenVox
       server with access to the same modules, although there are some subtle
       differences. When combined with scheduling and an automated system for
-      pushing manifests, this can be used to implement a serverless OpenVox
-      site.
+      pushing manifests, this can be used to implement a serverless site.
 
       Most users should use 'puppet agent' and 'puppet master' for site-wide
       manifests.

@@ -60,7 +60,7 @@ class Puppet::Application::Resource < Puppet::Application
       -----------
       This command provides simple facilities for converting current system
       state into Puppet code, along with some ability to modify the current
-      state using OpenVox's RAL.
+      state using Puppet's RAL.
 
       By default, you must at least provide a type to list, in which case
       puppet resource will tell you everything it knows about all resources of
