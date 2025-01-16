@@ -110,13 +110,13 @@ class Puppet::Application::Device < Puppet::Application
 
       DESCRIPTION
       -----------
-      Devices require a proxy Puppet agent to request certificates, collect facts,
+      Devices require a proxy OpenVox agent to request certificates, collect facts,
       retrieve and apply catalogs, and store reports.
 
 
       USAGE NOTES
       -----------
-      Devices managed by the puppet-device subcommand on a Puppet agent are
+      Devices managed by the puppet-device subcommand on an OpenVox agent are
       configured in device.conf, which is located at $confdir/device.conf by default,
       and is configurable with the $deviceconfig setting.
 

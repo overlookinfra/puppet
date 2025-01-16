@@ -63,8 +63,7 @@ class Puppet::Application::Doc < Puppet::Application
 
       SYNOPSIS
       --------
-      Generates a reference for all Puppet types. Largely meant for internal
-      Puppet Inc. use. (Deprecated)
+      Generates a reference for all Puppet types. Largely meant for internal use. (Deprecated)
 
 
       USAGE
@@ -78,7 +77,7 @@ class Puppet::Application::Doc < Puppet::Application
       This deprecated command generates a Markdown document to stdout
       describing all installed Puppet types or all allowable arguments to
       puppet executables. It is largely meant for internal use and is used to
-      generate the reference document available on the Puppet Inc. web site.
+      generate the reference documents which can be posted to a website.
 
       For Puppet module documentation (and all other use cases) this command
       has been superseded by the "puppet-strings"

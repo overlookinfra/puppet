@@ -36,7 +36,7 @@ Puppet::Face.define(:config, '0.0.1') do
   end
 
   action(:print) do
-    summary _("Examine Puppet's current settings.")
+    summary _("Examine OpenVox's current settings.")
     arguments _("all \\| <setting> [<setting> ...]")
     description <<-'EOT'
       Prints the value of a single setting or a list of settings.
@@ -116,7 +116,7 @@ Puppet::Face.define(:config, '0.0.1') do
   end
 
   action(:set) do
-    summary _("Set Puppet's settings.")
+    summary _("Set OpenVox's settings.")
     arguments _("[setting_name] [setting_value]")
     description <<-'EOT'
       Updates values in the `puppet.conf` configuration file.
@@ -199,7 +199,7 @@ Puppet::Face.define(:config, '0.0.1') do
   end
 
   action(:delete) do
-    summary _("Delete a Puppet setting.")
+    summary _("Delete an OpenVox setting.")
     arguments _("<setting>")
     # TRANSLATORS 'main' is a specific section name and should not be translated
     description "Deletes a setting from the specified section. (The default is the section 'main')."

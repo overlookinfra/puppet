@@ -17,7 +17,7 @@ class Puppet::Application::Ssl < Puppet::Application
 
       SYNOPSIS
       --------
-      Manage SSL keys and certificates for SSL clients needing
+      Manage SSL keys and certificates for clients needing
       to communicate with an OpenVox infrastructure.
 
       USAGE

@@ -10,7 +10,7 @@ Puppet::Face.define(:help, '0.0.1') do
   copyright "Puppet Inc., Vox Pupuli", 2011
   license   _("Apache 2 license; see COPYING")
 
-  summary _("Display Puppet help.")
+  summary _("Display OpenVox help.")
 
   action(:help) do
     summary _("Display help about OpenVox subcommands and their actions.")
