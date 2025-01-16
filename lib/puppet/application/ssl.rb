@@ -7,7 +7,7 @@ class Puppet::Application::Ssl < Puppet::Application
   run_mode :agent
 
   def summary
-    _("Manage SSL keys and certificates for puppet SSL clients")
+    _("Manage SSL keys and certificates for OpenVox SSL clients")
   end
 
   def help
@@ -17,8 +17,8 @@ class Puppet::Application::Ssl < Puppet::Application
 
       SYNOPSIS
       --------
-      Manage SSL keys and certificates for SSL clients needing
-      to communicate with a puppet infrastructure.
+      Manage SSL keys and certificates for clients needing
+      to communicate with an OpenVox infrastructure.
 
       USAGE
       -----
@@ -83,6 +83,12 @@ class Puppet::Application::Ssl < Puppet::Application
 
        * show:
         Print the full-text version of this host's certificate.
+
+      COPYRIGHT
+        ---------
+        Copyright (c) 2011 Puppet Inc.
+        Copyright (c) 2024 Vox Pupuli
+        Licensed under the Apache 2.0 License
     HELP
   end
 

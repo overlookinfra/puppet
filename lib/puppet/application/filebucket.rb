@@ -16,7 +16,7 @@ class Puppet::Application::Filebucket < Puppet::Application
   attr_reader :args
 
   def summary
-    _("Store and retrieve files in a filebucket")
+    _("Store and retrieve files in an OpenVox filebucket")
   end
 
   def digest_algorithm
@@ -31,7 +31,7 @@ class Puppet::Application::Filebucket < Puppet::Application
 
       SYNOPSIS
       --------
-      A stand-alone Puppet filebucket client.
+      A stand-alone OpenVox filebucket client.
 
 
       USAGE
@@ -41,7 +41,7 @@ class Puppet::Application::Filebucket < Puppet::Application
         [-f|--fromdate <date>] [-t|--todate <date>] [-b|--bucket <directory>]
         <file> <file> ...
 
-      Puppet filebucket can operate in three modes, with only one mode per call:
+      This filebucket client can operate in three modes, with only one mode per call:
 
       backup:
         Send one or more files to the specified file bucket. Each sent file is
@@ -120,8 +120,7 @@ class Puppet::Application::Filebucket < Puppet::Application
       * --local:
         Use the local filebucket. This uses the default configuration
         information and the bucket located at the '$clientbucketdir'
-        setting by default. If '--bucket' is set, puppet uses that
-        path instead.
+        setting by default. If '--bucket' is set, that path is used instead.
 
       * --remote:
         Use a remote filebucket. This uses the default configuration
@@ -207,7 +206,9 @@ class Puppet::Application::Filebucket < Puppet::Application
 
       COPYRIGHT
       ---------
-      Copyright (c) 2011 Puppet Inc., LLC Licensed under the Apache 2.0 License
+      Copyright (c) 2011 Puppet Inc.
+      Copyright (c) 2024 Vox Pupuli
+      Licensed under the Apache 2.0 License
 
     HELP
   end

@@ -81,7 +81,7 @@ class Puppet::Application::Device < Puppet::Application
   end
 
   def summary
-    _("Manage remote network devices")
+    _("Manage remote network devices via OpenVox")
   end
 
   def help
@@ -92,7 +92,7 @@ class Puppet::Application::Device < Puppet::Application
 
       SYNOPSIS
       --------
-      Retrieves catalogs from the Puppet master and applies them to remote devices.
+      Retrieves catalogs from the OpenVox server and applies them to remote devices.
 
       This subcommand can be run manually; or periodically using cron,
       a scheduled task, or a similar tool.
@@ -110,13 +110,13 @@ class Puppet::Application::Device < Puppet::Application
 
       DESCRIPTION
       -----------
-      Devices require a proxy Puppet agent to request certificates, collect facts,
+      Devices require a proxy OpenVox agent to request certificates, collect facts,
       retrieve and apply catalogs, and store reports.
 
 
       USAGE NOTES
       -----------
-      Devices managed by the puppet-device subcommand on a Puppet agent are
+      Devices managed by the puppet-device subcommand on an OpenVox agent are
       configured in device.conf, which is located at $confdir/device.conf by default,
       and is configurable with the $deviceconfig setting.
 
@@ -222,7 +222,8 @@ class Puppet::Application::Device < Puppet::Application
 
       COPYRIGHT
       ---------
-      Copyright (c) 2011-2018 Puppet Inc., LLC
+      Copyright (c) 2011-2018 Puppet Inc.,
+      Copyright (c) 2024 Vox Pupuli
       Licensed under the Apache 2.0 License
     HELP
   end
